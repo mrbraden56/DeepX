@@ -1,0 +1,2 @@
+run:
+	cd build; cmake ..; cmake --build . --config Release; ./src;
