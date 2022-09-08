@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/braden/Work/DeepX/src
+CMAKE_SOURCE_DIR = /mnt/c/Users/brade/Research/DeepX
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/braden/Work/DeepX/src/build
+CMAKE_BINARY_DIR = /mnt/c/Users/brade/Research/DeepX/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/src.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/main.cpp.o: CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/main.cpp.o: ../main.cpp
 CMakeFiles/src.dir/main.cpp.o: CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/braden/Work/DeepX/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/src.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/main.cpp.o -MF CMakeFiles/src.dir/main.cpp.o.d -o CMakeFiles/src.dir/main.cpp.o -c /home/braden/Work/DeepX/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/brade/Research/DeepX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/src.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/main.cpp.o -MF CMakeFiles/src.dir/main.cpp.o.d -o CMakeFiles/src.dir/main.cpp.o -c /mnt/c/Users/brade/Research/DeepX/main.cpp
 
 CMakeFiles/src.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/braden/Work/DeepX/src/main.cpp > CMakeFiles/src.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/brade/Research/DeepX/main.cpp > CMakeFiles/src.dir/main.cpp.i
 
 CMakeFiles/src.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/braden/Work/DeepX/src/main.cpp -o CMakeFiles/src.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/brade/Research/DeepX/main.cpp -o CMakeFiles/src.dir/main.cpp.s
 
 CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o: CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o: ../compress_weights/compress_weights.cpp
 CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o: CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/braden/Work/DeepX/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o -MF CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o.d -o CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o -c /home/braden/Work/DeepX/src/compress_weights/compress_weights.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/brade/Research/DeepX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o -MF CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o.d -o CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o -c /mnt/c/Users/brade/Research/DeepX/compress_weights/compress_weights.cpp
 
 CMakeFiles/src.dir/compress_weights/compress_weights.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/compress_weights/compress_weights.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/braden/Work/DeepX/src/compress_weights/compress_weights.cpp > CMakeFiles/src.dir/compress_weights/compress_weights.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/brade/Research/DeepX/compress_weights/compress_weights.cpp > CMakeFiles/src.dir/compress_weights/compress_weights.cpp.i
 
 CMakeFiles/src.dir/compress_weights/compress_weights.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/compress_weights/compress_weights.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/braden/Work/DeepX/src/compress_weights/compress_weights.cpp -o CMakeFiles/src.dir/compress_weights/compress_weights.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/brade/Research/DeepX/compress_weights/compress_weights.cpp -o CMakeFiles/src.dir/compress_weights/compress_weights.cpp.s
 
 # Object files for target src
 src_OBJECTS = \
@@ -108,12 +108,12 @@ src_EXTERNAL_OBJECTS =
 src: CMakeFiles/src.dir/main.cpp.o
 src: CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o
 src: CMakeFiles/src.dir/build.make
-src: /home/braden/libtorch/lib/libtorch.so
-src: /home/braden/libtorch/lib/libc10.so
-src: /home/braden/libtorch/lib/libkineto.a
-src: /home/braden/libtorch/lib/libc10.so
+src: ../torch/libtorch/lib/libtorch.so
+src: ../torch/libtorch/lib/libc10.so
+src: ../torch/libtorch/lib/libkineto.a
+src: ../torch/libtorch/lib/libc10.so
 src: CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/braden/Work/DeepX/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable src"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/brade/Research/DeepX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable src"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,6 +125,6 @@ CMakeFiles/src.dir/clean:
 .PHONY : CMakeFiles/src.dir/clean
 
 CMakeFiles/src.dir/depend:
-	cd /home/braden/Work/DeepX/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/braden/Work/DeepX/src /home/braden/Work/DeepX/src /home/braden/Work/DeepX/src/build /home/braden/Work/DeepX/src/build /home/braden/Work/DeepX/src/build/CMakeFiles/src.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/brade/Research/DeepX/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/brade/Research/DeepX /mnt/c/Users/brade/Research/DeepX /mnt/c/Users/brade/Research/DeepX/build /mnt/c/Users/brade/Research/DeepX/build /mnt/c/Users/brade/Research/DeepX/build/CMakeFiles/src.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/src.dir/depend
 

@@ -29,9 +29,7 @@ std::string demangle(const char* name) {
 int main(int argc, char *argv[])
 {
     torch::jit::script::Module module;
-    torch::jit::script::Module module_copy;
-    module=torch::jit::load("/home/braden/Work/DeepX/mnist/encoded_nn/model/mnist_mode.pt");
-    module_copy=torch::jit::load("/home/braden/Work/DeepX/mnist/encoded_nn/model/mnist_mode.pt");
+    module=torch::jit::load("/mnt/c/Users/brade/Research/DeepX/mnist/model/mnist.pt");
     std::vector<at::Tensor> weights;
     std::vector<at::Tensor> bias;
     for (const auto& pair : module.named_parameters()) {
@@ -44,6 +42,6 @@ int main(int argc, char *argv[])
         }
     }
     std::cout<<"Note: that the weights are transposed so (64,784)->(784,64)"<<std::endl;
-    CompressWeights svd_class(0.2);
-    svd_class.compute_svd(weights[1]);
+    CompressWeights compress_weights(0.2);
+    compress_weights.edit_weights(weights, 1);
 }

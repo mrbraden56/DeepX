@@ -9,11 +9,12 @@ class CompressWeights
 {
     private:
         double percentage;
-        Eigen::MatrixXf U;
-        Eigen::MatrixXf N;
 
     public:
         CompressWeights(double user_percent);
-        void compute_svd(at::Tensor matrix);
-        std::vector<at::Tensor> edit_weights(std::vector<at::Tensor> &weights);
+        at::Tensor eigenVectorToTorchTensor(Eigen::MatrixXf e);
+        at::Tensor compute_U(at::Tensor matrix);
+        at::Tensor compute_SIGMA(at::Tensor matrix);
+        at::Tensor compute_V(at::Tensor matrix);
+        std::vector<at::Tensor> edit_weights(std::vector<at::Tensor> &weights, int index);
 };

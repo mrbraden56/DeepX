@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/braden/Work/DeepX/src/compress_weights/compress_weights.cpp" "CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o" "gcc" "CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o.d"
-  "/home/braden/Work/DeepX/src/main.cpp" "CMakeFiles/src.dir/main.cpp.o" "gcc" "CMakeFiles/src.dir/main.cpp.o.d"
+  "/mnt/c/Users/brade/Research/DeepX/compress_weights/compress_weights.cpp" "CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o" "gcc" "CMakeFiles/src.dir/compress_weights/compress_weights.cpp.o.d"
+  "/mnt/c/Users/brade/Research/DeepX/main.cpp" "CMakeFiles/src.dir/main.cpp.o" "gcc" "CMakeFiles/src.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.
