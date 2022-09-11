@@ -53,13 +53,14 @@ at::Tensor CompressWeights::compute_V(at::Tensor matrix)
     return eigenVectorToTorchTensor(v);
 }
 
-std::vector<at::Tensor> CompressWeights::edit_weights(std::vector<at::Tensor> &weights, int index){
+void CompressWeights::edit_weights(std::vector<at::Tensor> &weights, int index){
     at::Tensor U = compute_U(weights[index]);
     at::Tensor SIGMA = compute_SIGMA(weights[index]);
     at::Tensor V = compute_V(weights[index]);
-    std::cout<<"(64,64) for matrix V -> "<<"("<<V.size(0)<<", "<<V.size(1)<<")\n";
+    at::Tensor N = SIGMA * V;
     at::Tensor U_next = compute_U(weights[index+1]);
-    U_next=at::transpose(U_next, 0 ,1);
-    std::cout<<"(64,64) for matrix U+1 -> "<<"("<<U_next.size(0)<<", "<<U_next.size(1)<<")\n";
-    return weights;
+    U=at::transpose(U, 0 ,1);
+    weights[index]=U;
+    weights[index+1]=U_next;
+    weights.insert(weights.begin() + index+1, at::transpose(N, 0 ,1));
 }

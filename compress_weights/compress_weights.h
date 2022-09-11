@@ -16,5 +16,5 @@ class CompressWeights
         at::Tensor compute_U(at::Tensor matrix);
         at::Tensor compute_SIGMA(at::Tensor matrix);
         at::Tensor compute_V(at::Tensor matrix);
-        std::vector<at::Tensor> edit_weights(std::vector<at::Tensor> &weights, int index);
+        void edit_weights(std::vector<at::Tensor> &weights, int index);
 };

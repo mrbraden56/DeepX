@@ -26,22 +26,50 @@ std::string demangle(const char* name) {
     // std::cout<<demangle(typeid(pair.value).name())<<std::endl;
 }
 
+void print_weights(std::vector<at::Tensor> weights){
+    for (auto & matrix : weights) {
+        std::cout<<"("<<matrix.size(1)<<", "<<matrix.size(0)<<")\n";
+    }
+}
+
+std::vector<at::Tensor> get_weights(torch::jit::script::Module module){
+    std::vector<at::Tensor> weights;
+    for (const auto& pair : module.named_parameters()) {
+        if(pair.name.back()!='s'){
+            weights.push_back(pair.value);
+        }
+        else{
+            //bias
+        }
+    }
+
+    return weights;
+}
+
 int main(int argc, char *argv[])
 {
     torch::jit::script::Module module;
     module=torch::jit::load("/mnt/c/Users/brade/Research/DeepX/mnist/model/mnist.pt");
-    std::vector<at::Tensor> weights;
-    std::vector<at::Tensor> bias;
-    for (const auto& pair : module.named_parameters()) {
-        if(pair.name.back()!='s'){
-            weights.push_back(pair.value);
-            std::cout<<"("<<pair.value.size(0)<<", "<<pair.value.size(1)<<")"<<std::endl;
+    std::vector<at::Tensor> weights = get_weights(module);
+    print_weights(weights);
+    CompressWeights compress_weights(0.8);
+    std::cout<<"Weights Compressing...\n";
+    compress_weights.edit_weights(weights, 1);
+    torch::NoGradGuard no_grad;
+    torch::autograd::GradMode::set_enabled(false);
+    std::cout<<weights[0].size(1)<<std::endl;
+    for (const auto& p : module.named_parameters()) {
+        // at::Tensor z = &p.value; // note that z is a Tensor, same as &p : layers->parameters
+        if(p.name.back()!='s'){
+            // TODO: have to add operator overload to change weights of module
+            p.value=weights[0];
         }
         else{
-            bias.push_back(pair.value);
+            //z.uniform_(l, u);
         }
     }
-    std::cout<<"Note: that the weights are transposed so (64,784)->(784,64)"<<std::endl;
-    CompressWeights compress_weights(0.2);
-    compress_weights.edit_weights(weights, 1);
+    torch::autograd::GradMode::set_enabled(true);
+    std::vector<at::Tensor> weights2 = get_weights(module);
+    print_weights(weights2);
+
 }
