@@ -7,12 +7,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a>
-    <img src="img/patrick.jpg?raw=true" alt="Logo" width="1040" height="432">
-  </a>
-
   <p align="center">
-    DeepX
+    Neural Network Compression using SVD
     <br />
   </p>
 </p>
