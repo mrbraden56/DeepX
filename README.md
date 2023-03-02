@@ -6,7 +6,7 @@
   
 <!-- PROJECT LOGO -->
 <br />
-<p align="center">
+<p align="center"> 
   <p align="center">
     Neural Network Compression using SVD  
     <br />
